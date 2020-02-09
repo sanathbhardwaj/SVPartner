@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="50dp">
+
+            <RelativeLayout
+                android:id="@+id/j"
+                android:layout_marginStart="-25dp"
+                android:layout_marginEnd="-25dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <ImageView
+                    android:id="@+id/back_dismiss"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/back"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:id="@+id/fi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete Address"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="28sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/bold_normal"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address Line 1*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:id="@+id/address_line_1"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/f"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="7dp"
+                    android:hint="Flat no., house no. etc"
+                    android:background="@drawable/edit_txt_background"
+                    android:maxLines="1"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/ln"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address Line 2*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:maxLines="1"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/ln"
+                    android:paddingStart="7dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/address_line_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Land Mark etc."
+                    android:fontFamily="@font/regular"
+                    android:background="@drawable/edit_txt_background"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/k"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Locality"
+                    android:fontFamily="@font/regular"/>
+                <TextView
+                    android:maxLines="1"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/k"
+                    android:paddingStart="7dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/Locality"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/regular"
+                    android:background="@drawable/edit_txt_background"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:fontFamily="@font/regular"/>
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/city"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/e"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:paddingStart="7dp"
+                    android:background="@drawable/edit_txt_background"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:fontFamily="@font/regular"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/state"
+                    android:layout_below="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="7dp"
+                    android:background="@drawable/edit_txt_background"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Country"
+                    android:fontFamily="@font/regular"/>
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/country"
+                    android:layout_below="@+id/p"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingStart="7dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:background="@drawable/edit_txt_background"/>
+
+            </RelativeLayout>
+
+
+
+            <Button
+                android:layout_marginBottom="70dp"
+                android:id="@+id/select_location"
+                android:layout_below="@id/terms"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_drwable"
+                android:text="Confirm Location"
+                android:textAllCaps="false"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.core.widget.NestedScrollView>

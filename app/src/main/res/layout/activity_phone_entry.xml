@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:showDividers="middle"
+        android:orientation="horizontal"
+        android:weightSum="5.0">
+    </LinearLayout>
+    <View
+        android:layout_below="@id/appbar"
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dropshadow"/>
+
+    <LinearLayout
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="10.0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/t"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enter mobile number"
+                        android:fontFamily="@font/bold"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="28sp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/phone_entry"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:weightSum="6.0"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/india"
+                                android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:id="@+id/editTextCountryCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:background="@null"
+                                android:text="+91"
+                                android:inputType="none"
+                                android:fontFamily="@font/regular"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4.5">
+                            <EditText
+                                android:hint="Enter phone number"
+                                android:inputType="phone"
+                                android:id="@+id/editTextPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:background="@null"
+                                android:fontFamily="@font/regular"
+                                android:textSize="16sp"
+                                android:maxLength="10"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/phone_entry"
+                        android:id="@+id/shadow_view_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/dropshadow" />
+
+                    <LinearLayout
+                        android:id="@+id/terms"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/shadow_view_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/light_normal"
+                            android:text="@string/terms_and_conditions_and_privacy_policy"/>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/buttonContinue"
+                        android:layout_below="@id/terms"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_drwable"
+                        android:text="Continue"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="220dp"-->
+    <!--            android:layout_height="220dp"-->
+    <!--            android:src="@drawable/logomain" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Verify Your Number"-->
+    <!--            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
+    <!--            android:textColor="@color/colorPrimaryDark"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="280dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="Please enter your mobile number to receive a verification code"-->
+    <!--            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
+    <!--            android:textColor="@color/colorPrimaryDark" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="35dp"-->
+    <!--            android:layout_marginBottom="15dp"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/editTextCountryCode"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:inputType="phone"-->
+    <!--                android:maxLines="1"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:text="+91"-->
+    <!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
+    <!--                android:textColor="@color/colorPrimaryDark" />-->
+
+    <!--            <View-->
+    <!--                android:layout_width="5dp"-->
+    <!--                android:layout_height="0dp" />-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/editTextPhone"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:hint="Phone Number"-->
+    <!--                android:inputType="phone"-->
+    <!--                android:maxLines="1"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
+    <!--                android:textColor="@color/colorPrimaryDark">-->
+
+    <!--                <requestFocus />-->
+
+    <!--            </EditText>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/buttonContinue"-->
+    <!--            android:layout_width="200dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/button_drwable"-->
+    <!--            android:text="CONTINUE"-->
+    <!--            android:textColor="@android:color/white" />-->
+
+</RelativeLayout>

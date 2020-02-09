@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:showDividers="middle"
+        android:orientation="horizontal"
+        android:weightSum="5.0">
+    </LinearLayout>
+    <View
+        android:layout_below="@id/appbar"
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dropshadow" />
+
+    <LinearLayout
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="10.0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/t"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OTP Verification"
+                        android:fontFamily="@font/bold"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="28sp"/>
+
+                    <TextView
+                        android:layout_below="@id/t"
+                        android:id="@+id/tt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:text="Enter the 6-digit code sent to you at"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/tt">
+                        <TextView
+                            android:id="@+id/phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="+91 123456789"/>
+                        <TextView
+                            android:id="@+id/edit_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="Edit"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/blue"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/phone_entry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.alimuzaffar.lib.pin.PinEntryEditText
+                                android:id="@+id/editText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="false"
+                                android:digits="1234567890"
+                                app:pinAnimationType="none"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp"
+                                app:pinLineStroke="2dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/buttonSignIn"
+                        android:layout_below="@id/phone_entry"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_drwable"
+                        android:text="Verify"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/resend_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/buttonSignIn"
+                        android:text="resend"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"/>
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/resend_btn"
+                        android:layout_centerHorizontal="true"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

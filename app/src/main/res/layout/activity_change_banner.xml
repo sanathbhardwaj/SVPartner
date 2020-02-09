@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.ChangeBanner">
+
+    <RelativeLayout
+        android:id="@+id/j"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/j"
+        android:id="@+id/shadow_view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/dropshadowlight"/>
+
+    <ScrollView
+        android:layout_below="@id/shadow_view6"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:id="@+id/fi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Shop Banner"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="28sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/bold_normal"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/upload_rl"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edit_txt_background">
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:id="@+id/product_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/rename"/>
+                <TextView
+                    android:id="@+id/u"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/product_img"
+                    android:layout_marginStart="15dp"
+                    android:text="Choose Image"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/regular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_below="@id/u"
+                    android:layout_toRightOf="@id/product_img"
+                    android:layout_marginStart="15dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/regular"
+                    android:text="Please upload a picture of product. This picture would be visible to your customer." />
+
+
+            </RelativeLayout>
+            <Button
+                android:id="@+id/upload"
+                android:layout_marginTop="20dp"
+                android:text="Done"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_drwable"/>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</RelativeLayout>

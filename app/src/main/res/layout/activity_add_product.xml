@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.AddProduct">
+
+    <RelativeLayout
+        android:id="@+id/j"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/j"
+        android:id="@+id/shadow_view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/dropshadowlight"/>
+
+    <ScrollView
+        android:layout_below="@id/shadow_view6"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:id="@+id/fi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Product"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="28sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/bold_normal"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/upload_rl"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edit_txt_background">
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:id="@+id/product_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/rename"/>
+                <TextView
+                    android:id="@+id/u"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/product_img"
+                    android:layout_marginStart="15dp"
+                    android:text="Upload Image"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/regular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_below="@id/u"
+                    android:layout_toRightOf="@id/product_img"
+                    android:layout_marginStart="15dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/regular"
+                    android:text="Please upload a picture of product. This picture would be visible to your customer." />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product Name*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:id="@+id/product_name"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/f"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="7dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/regular"
+                    android:background="@drawable/edit_txt_background"
+                    android:maxLines="1"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/fd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product Price* (in ₹)"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:id="@+id/product_price"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/fd"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:paddingLeft="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_txt_background"
+                    android:maxLines="1"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/fdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stock*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:id="@+id/product_stock"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/fdd"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:paddingLeft="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_txt_background"
+                    android:maxLines="1"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/ln"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product Description*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:gravity="top"
+                    android:maxLines="3"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/ln"
+                    android:id="@+id/product_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="165dp"
+                    android:paddingLeft="7dp"
+                    android:background="@drawable/edit_txt_background"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product Category*"
+                    android:fontFamily="@font/regular"/>
+
+                <Spinner
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/category"
+                    android:id="@+id/my_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="7dp"
+                    android:scrollbars="none"
+                    android:background="@drawable/edit_txt_background"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_marginBottom="70dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/add_another_product"
+                android:layout_below="@id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_drwable"
+                android:text="Add Product"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

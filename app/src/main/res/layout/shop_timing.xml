@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Days"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_below="@id/l"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <ToggleButton
+                android:id="@+id/tD"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:textOff="Mon"
+                android:textOn="Mon"
+                style="@style/toggleButton"
+                android:background="@drawable/toggle_bg" />
+            <ToggleButton
+                android:id="@+id/tL"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="Tue"
+                android:textOn="Tue"
+                style="@style/toggleButton"
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/tM"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="Wed"
+                android:textOn="Wed"
+                style="@style/toggleButton"
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/tMi"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="Thu"
+                android:textOn="Thu"
+                style="@style/toggleButton"
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/tJ"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="Fri"
+                android:textOn="Fri"
+                style="@style/toggleButton"
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/tV"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="Sat"
+                android:textOn="Sat"
+                style="@style/toggleButton"
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/tS"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="Sun"
+                android:textOn="Sun"
+                style="@style/toggleButton"
+                android:background="@drawable/toggle_bg" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/open_time"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/lll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Time"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/open_time_tv"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_txt_background"
+                android:layout_below="@id/lll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00 am"
+                android:padding="10dp"
+                android:textSize="30sp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/close_time"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/lllh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close Time"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/close_time_tv"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_txt_background"
+                android:layout_below="@id/lllh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00 pm"
+                android:padding="10dp"
+                android:textSize="30sp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/close_time"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_drwable"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

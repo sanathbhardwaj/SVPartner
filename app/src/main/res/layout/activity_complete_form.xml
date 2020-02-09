@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:id="@+id/j"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/j"
+        android:id="@+id/shadow_view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/dropshadowlight"/>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_below="@id/j"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="50dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:id="@+id/fi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Registration"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="28sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/bold_normal"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:id="@+id/full_name"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/f"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Eg. Mr. Rik"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="7dp"
+                    android:background="@drawable/edit_txt_background"
+                    android:maxLines="1"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/ln"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Display Name*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:maxLines="1"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/ln"
+                    android:paddingStart="7dp"
+                    android:hint="Eg. Reliance Mart"
+                    android:id="@+id/shop_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/regular"
+                    android:background="@drawable/edit_txt_background"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/fp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Slogan*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:id="@+id/shop_slogan"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/fp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Eg. Aapki apni dukaan"
+                    android:fontFamily="@font/regular"
+                    android:paddingStart="7dp"
+                    android:background="@drawable/edit_txt_background"
+                    android:maxLines="1"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shop_timing_rl"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/fps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Timing*"
+                    android:fontFamily="@font/regular"/>
+                <LinearLayout
+                    android:id="@+id/shop_timing_ll"
+                    android:background="@drawable/edit_txt_background"
+                    android:layout_below="@id/fps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true">
+                    <TextView
+                        android:id="@+id/shop_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:id="@+id/shop_timing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_alignParentEnd="true"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Category*"
+                    android:fontFamily="@font/regular"/>
+
+                <Spinner
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/category"
+                    android:id="@+id/shop_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="7dp"
+                    android:scrollbars="none"
+                    android:background="@drawable/edit_txt_background"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number*"
+                    android:fontFamily="@font/regular"/>
+                <LinearLayout
+                    android:layout_below="@id/m"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/phone_entry"
+                    android:layout_width="match_parent"
+                    android:weightSum="6.0"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/regular"
+                    android:background="@drawable/edit_txt_background">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <ImageView
+                            android:layout_marginStart="2dp"
+                            android:layout_width="30dp"
+                            android:paddingStart="7dp"
+                            android:src="@drawable/india"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/regular"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5.0">
+                        <TextView
+                            android:id="@+id/phone_number"
+                            android:inputType="phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@null"
+                            android:maxLines="1"
+                            android:layout_centerVertical="true"
+                            android:text="Updating..."
+                            android:fontFamily="@font/regular"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/email"
+                    android:layout_below="@+id/e"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingStart="7dp"
+                    android:hint="eg. example@company.com"
+                    android:background="@drawable/edit_txt_background"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password*"
+                    android:fontFamily="@font/regular"/>
+                <EditText
+                    android:inputType="textPassword"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/password"
+                    android:layout_below="@+id/p"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingStart="7dp"
+                    android:hint="eg.aefg56@12"
+                    android:background="@drawable/edit_txt_background"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/upload_rl"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edit_txt_background">
+
+                <ImageView
+                    android:id="@+id/upload"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/rename"/>
+                <TextView
+                    android:id="@+id/u"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/upload"
+                    android:layout_marginStart="15dp"
+                    android:text="Upload Image"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/regular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/u"
+                    android:layout_toRightOf="@id/upload"
+                    android:layout_marginStart="15dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/regular"
+                    android:text="Please upload a banner of your shop. The banner will be visible to customers." />
+
+            </RelativeLayout>
+            <View
+                android:layout_below="@id/upload_rl"
+                android:id="@+id/shadow_view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/dropshadowlight"/>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/light_normal"
+                    android:text="@string/terms_and_conditions_and_privacy_policy"/>
+            </RelativeLayout>
+            <Button
+                android:layout_marginBottom="70dp"
+                android:id="@+id/submit"
+                android:layout_below="@id/terms"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_drwable"
+                android:text="Choose Store Location"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

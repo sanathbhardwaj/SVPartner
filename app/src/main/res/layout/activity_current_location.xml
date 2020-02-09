@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="CurrentLocation"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3.0">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.0">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </fragment>
+            <com.skyfishjy.library.RippleBackground
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ripple_bg"
+                app:rb_color="@color/colorPrimaryLight"
+                app:rb_radius="32dp"
+                app:rb_type="strokeRipple"
+                app:rb_rippleAmount="4"
+                app:rb_duration="3000"
+                app:rb_scale="6">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:translationY="-19dp"
+                    android:src="@drawable/gps"/>
+            </com.skyfishjy.library.RippleBackground>
+
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/imgMyLocation"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/position"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/back"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"/>
+            </LinearLayout>`
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/locationicon"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"/>
+
+                <TextView
+                    android:id="@+id/current_Sub_Locality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:text="Locating..."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/bold_normal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/l"
+                android:id="@+id/current_address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text=""
+                android:fontFamily="@font/regular"
+                android:gravity="start"
+                android:textSize="18sp"/>
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/current_address"
+                android:id="@+id/btn_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select this Location"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_drwable"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
